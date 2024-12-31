@@ -1,0 +1,13 @@
+{
+    "home": {
+      "title": "Home",
+      "welcome": "Welcome to the Home Page",
+      "task7": "This text is conditionally displayed based on the directive.",
+      "task8": "Hover over this text to see the highlight directive in action.",
+      "task9": "Task 9",
+      "Result": "Result",
+      "task10": "Learning about this",
+      "task11": "Navigate to the feature component to see module organization in action.",
+      "task12": "Performance optimizations have been implemented using OnPush change detection and trackBy function in ngFor loops."
+    }
+  }

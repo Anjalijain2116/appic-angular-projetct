@@ -1,0 +1,11 @@
+{
+  "routes": [
+    "/",
+    "/error",
+    "/feature",
+    "/form",
+    "/lifecycle",
+    "/login",
+    "/parent"
+  ]
+}

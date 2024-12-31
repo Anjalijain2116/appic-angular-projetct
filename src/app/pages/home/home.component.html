@@ -1,0 +1,77 @@
+<div class="container">
+  <h2>Task 1</h2>
+  <p>
+    Navigate to the parent component to see component communication in action.
+    <a routerLink="/parent" class="btn btn-primary">Go to Parent Component</a>
+  </p>
+
+  <h2>Task 2</h2>
+  <p>Data from Service:</p>
+  <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+  <ul *ngIf="data">
+    <li *ngFor="let item of data; trackBy: trackByFn">{{ item }}</li>
+  </ul>
+
+  <h2>Task 3</h2>
+  <p>1. Lazy loading implemented when load pages.  &nbsp; 2. Router parameter :- <a routerLink="/child/1" class="btn btn-secondary">Go to Child Component with ID 1</a></p>
+  
+<h2>Task 4</h2>
+  <p>Navigate to the form component to see reactive forms and validation in action. <a routerLink="/form" class="btn btn-primary">Go to Form Component</a></p>
+  
+  <h2>Task 5</h2>
+  <p>Data fetched from API:</p>
+  <div *ngIf="error1" class="alert alert-danger">{{ error1 }}</div>
+  <ul *ngIf="posts">
+    <li >{{ posts[0].title }}</li>
+  </ul>
+
+   <h2>Task 6</h2>
+  <p>Data managed by NGRX Store:</p>
+  <div *ngIf="errors$ | async as errors" class="alert alert-danger">{{ errors }}</div>
+  <ul *ngIf="posts$ | async as posts">
+    <li >{{ posts[0]?.title }}</li>
+  </ul>
+
+  <h2>Task 7</h2>
+  <p *appIfLoggedIn="true">This text is conditionally displayed based on the directive.</p>
+  <p appHighlight="lightblue">Hover over this text to see the highlight directive in action.</p>
+
+  <h2>Task 8</h2>
+  <p>Custom Pipe: {{ 'hello world' | custom }}</p>
+  <p>Parameterized Pipe: {{ 'hello world' | parameterized:'Prefix-':'-Suffix' }}</p>
+
+
+  <h2>Task 9</h2>
+  <p>Navigate to the lifecycle component to see lifecycle hooks in action. <a routerLink="/lifecycle" class="btn btn-primary">Go to Lifecycle Component</a></p>
+  
+  <h2>Task 10</h2>
+  <p>Learning about this </p>
+
+  <h2>Task 11</h2>
+  <p>Navigate to the feature component to see module organization in action.  <a routerLink="/feature" class="btn btn-primary">Go to Feature Component</a></p>
+ 
+
+  <h2>Task 12</h2>
+  <p>Performance optimizations have been implemented using OnPush change detection and trackBy function in ngFor loops.</p>
+
+  <h2>Task 13</h2>
+  <p>Error handling has been implemented with a global error handler and error pages. <a routerLink="/hii" class="btn btn-primary">Random page</a></p>
+
+  <h2>Task 14</h2>
+  <p>Authentication has been implemented with JWT, route guards, and logout functionality.</p>
+ <button *ngIf="isAuthenticated(); else loginButton" (click)="logout()" class="btn btn-danger">Logout</button>
+  <ng-template #loginButton>
+    <a routerLink="/login" class="btn btn-primary">Login</a>
+  </ng-template>
+
+   <h2>Task 15</h2>
+  <div class="language-switcher">
+  <div>Text change according to language :- {{'home.Result' | translate}} </div>
+  <button class="alert"(click)="switchLanguage('en')">English</button>
+  <button class="alert" (click)="switchLanguage('ar')">Arabic</button>
+</div>
+  <h2>Internationalization</h2>
+ 
+  <p>Current Date: {{ currentDate }}</p>
+  <p>Formatted Number: {{ formattedNumber }}</p>
+</div>
